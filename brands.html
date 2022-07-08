@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/eb8e784c45.js" crossorigin="anonymous"></script>
+    </head>
+    <body style="background-color:rgb(211, 226, 230)">
+        <h4>MANAGE BRANDS</h4>
+        <button  id="add_brand">Add Brand</button>
+        <div style="background-color:white;">
+            <p id="Added" style="font-weight: 300;">Manage Brands</p>
+            
+        <table>
+            <thead>
+                <tr>
+                    <th>Brand Name</th>
+                    <th>status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>    
+            <tbody id="dynamictable">
+                <tr>
+                    <td>Adidas</td>
+                    <td><p id="active">Active</p></td>
+                    <td><button id="edi">Edit</button><button id="del">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <button><a href="./home.html"><i class="fa-solid fa-house"></i></a></button>
+        <script src="brands.js"></script>
+    </body>
+    <style>
+        .fa-house{
+            position: fixed;
+            top:20px;
+            right:20px;
+            border: 1px solid;
+            padding: 10px 10px;
+            border-radius: 5px;
+        }
+        .fa-house:hover{
+            background-color: white;
+            box-shadow : 2px 2px 2px #000;
+            cursor:pointer;
+        }
+      #add_brand{
+        background-color: rgb(48, 137, 238);
+        color:aliceblue;
+        padding: 5px 15px 5px 15px;
+        border-radius: 4px;
+      }
+      th{
+        padding-right: 300px;
+      }
+      td{
+        line-height: 30px;
+      }
+      /*#active{
+        background-color:green;
+        color:white;
+        width:10px;
+        border-radius: 3px;
+        padding:0 3px ;
+        margin-right: 45px;
+      }*/
+      #active{
+        background-color:green;
+        color:white;
+        width:52px;
+        text-align: center;
+        border-radius: 3px;
+        padding:0 3px ;
+      }
+      #inactive{
+        background-color:rgb(245, 54, 54);
+        color:white;
+        width:52px;
+        text-align: center;
+        border-radius: 3px;
+        padding:0 3px ;
+      }
+    </style>
+</html>
+
+
+
+
+
+
+<!-- <tr id="4">
+                <td id="name4">-</td>
+                <td id="astatus4"><p>-</p></td>
+                <td><button id="edit4">Edit</button><button id="delete">Delete</button></td>
+            </tr>
+            <tr id="5">
+                <td id="name5">-</td>
+                <td id="astatus5"><p>-</p></td>
+                <td><button id="edit5">Edit</button><button id="delete">Delete</button></td>
+            </tr>
+            <tr id="6">
+                <td id="name6">-</td>
+                <td id="astatus6"><p>-</p></td>
+                <td><button id="edit6">Edit</button><button id="delete">Delete</button></td>
+            </tr>
+            <tr id="7">
+                <td id="name7">-</td>
+                <td id="astatus7"><p>-</p></td>
+                <td><button id="edit7">Edit</button><button id="delete">Delete</button></td>
+            </tr>
+            <tr id="8">
+                <td id="name8">-</td>
+                <td id="astatus8"><p>-</p></td>
+                <td><button id="edit8">Edit</button><button id="delete">Delete</button></td>
+            </tr>
+            <tr id="9">
+                <td id="name">-</td>
+                <td id="astatus"><p>-</p></td>
+                <td><button id="edit9">Edit</button><button id="delete">Delete</button></td>
+            </tr>
+            <tr id="10">
+                <td id="name">-</td>
+                <td id="astatus"><p>-</p></td>
+                <td><button id="edit10">Edit</button><button id="delete">Delete</button></td>
+            </tr> 
+        
+        
+        
+        <tr>
+                <th>Brand Name</th>
+                <th>status</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>Adidas</td>
+                <td><p id="active">Active</p></td>
+                <td><button id="edit1">Edit</button><button id="delete">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Nike</td>
+                <td><p id="inactive">Inactive</p></td>
+                <td><button id="edit2">Edit</button><button id="delete">Delete</button></td>
+            </tr>
+            <tr id="3">
+                <td id="name3">-</td>
+                <td id="astatus3"><p>-</p></td>  
+                <td><button id="edit3">Edit</button><button id="delete">Delete</button></td>
+            </tr>
+        
+        
+        
+        
+        -->

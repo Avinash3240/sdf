@@ -1,0 +1,325 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Home_page</title>
+        <script src="https://kit.fontawesome.com/eb8e784c45.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section id="menu">
+            <div class="items" id="items">
+            <div id="admin-page">
+                <p><i class="fa-solid fa-user"> A d m i n </i></p>
+                <p data-close-button class="closebtn">&times;</p>
+            </div>
+            <hr>
+        <p id="brands">Manage Products</p>
+        <p id="cat">Category</p>
+        <p id="stores">Stores</p>
+        <p id="employees">Employees</p>
+        <p id="sales">Sales</p>
+        <p id="orders">Orders</p>
+        <p id="review">Reviews</p>
+        <p id="profile">Profile</p>
+        </div>
+        <div id="class">
+            <div id="deco">
+               <p> PROFILE </p>
+               <button id="lgt">Logout</button>
+               <p id="clspbtn">&times;</p>
+            </div>
+     <hr>
+     <div id="prof">
+       <!--<i class="fa-solid fa-user" id="fuu"><img src="fa-solid fa-user"></i>-->
+       <div id="x">
+       <p id="user">User</p>
+       <p id="output">Admin</p>
+       </div>
+       <div id="x">
+        <p id="user">Email</p>
+        <p id="output">Admin_sdf20@gmail.com</p><br>
+        </div>
+     </div>
+        </div>
+        </section>
+        <div>
+          <i data-modal-target="#items" class="fa-solid fa-bars"> D A S H B O A R D</i>
+        </div>
+        <script>
+
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
+})
+
+
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.items')
+    closeModal(modal)
+  })
+})
+
+function openModal(modal) {
+  if (modal == null) return
+  modal.classList.add('active')
+}
+
+function closeModal(modal) {
+  if (modal == null) return
+  modal.classList.remove('active')
+}
+
+let sidebar = document.querySelector("#class");
+
+document.getElementById("profile").onclick =function(){
+  console.log("hello");
+  sidebar.classList.add('active');
+}
+
+document.getElementById("clspbtn").onclick = function(){
+  sidebar.classList.remove('active');
+}
+
+
+document.getElementById("brands").onclick = function(){
+  window.location.href="./brands.html";
+  console.log("hi");
+}
+
+document.getElementById("lgt").onclick=function(){
+  window.location.href="./loggingout.php";
+}
+
+document.getElementById("employees").onclick = function(){
+  window.location.href="./empprofiles.php";
+
+}
+
+        </script>
+    </body>
+</html>
+<style>
+    #class.active{
+            transform: translate(-50%,-70%) scale(1);  
+        }
+        #clspbtn{
+            cursor:pointer;
+        }
+        #class{
+            position:fixed;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-70%) scale(0);       
+            border: 1px solid;    
+            width:25%;
+            max-width: 80%;
+            padding:5px 10px;
+            background-color: antiquewhite;
+            box-shadow: 20px 20px 20px #000;
+            transition: 200ms;
+        
+        }
+        #admin-page{
+            display:flex;
+            text-align: center;
+            padding-left: 90px;
+            justify-content: space-between;
+        }
+        #lgt{
+            background-color:red;
+            color:white;
+            padding:5px 5px;
+            position: fixed;
+            top:25px;
+            left:50%;
+            border-radius:5px;
+        }
+        .closebtn{
+            size: 100px;
+            position: fixed;
+            top:0px;
+            left:267.5px;
+            background: none;
+            cursor: pointer;
+            width:30px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .items.active{
+            transform: scale(1);
+        }
+        #closebtn:hover{
+            background-color: rgb(62, 62, 123);
+        }
+        .fa-user{
+            padding-bottom: 30px;
+            padding-top: 20px;
+       }
+        .fa-bars{
+            position:fixed;
+            right:40px;
+            top:30px;
+            width:180px;
+            height: 10px;
+            text-align: center;
+            border:solid;
+            padding:15px 5px;
+        }
+        .fa-bars:hover{
+            background-color:rgb(56, 56, 87);
+            color:white;
+            cursor: pointer;
+        }
+        /*#profile{
+            position:fixed;
+            right:30px;
+            top :100px;
+            height:30px;
+            width:100px;
+            background-color: aliceblue;
+            border-radius: 20px;
+        }*/
+       /* #right{
+            position:fixed;
+            left:300px;
+            top:67.5px;
+            padding-left:40px;
+            font-size: 30px;
+            background-color: aqua;
+            width:100%;
+            height:50px;
+            padding-top: 25px;
+            padding-bottom: 15px;
+        }*/
+        .items{
+            position: fixed;
+            left :0;
+            top :0px;
+            background-color:rgb(11, 28, 59);
+            color:aliceblue;
+            width: 300px;
+            height: 100%;
+            line-height: 30px;
+            text-align: center;
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            font-size: large;
+            transform:scale(0);
+        }
+        /*#menu .items p:hover:nth-child(1){
+           border-left: 2px solid white;
+        }
+        .items p:hover:nth-child(2){
+           border-left: 2px solid white;
+        }*/
+        .items p:hover:nth-child(3){
+           border-left: 2px solid white;
+        }
+        .items p:hover:nth-child(4){
+           border-left: 2px solid white;
+        }
+        .items p:hover:nth-child(5){
+           border-left: 2px solid white;
+        }
+        .items p:hover:nth-child(6){
+           border-left: 2px solid white;
+        }
+        .items p:hover:nth-child(7){
+           border-left: 2px solid white;
+        }
+        .items p:hover:nth-child(8){
+           border-left: 2px solid white;
+        }
+        .items p:hover:nth-child(9){
+           border-left: 2px solid white;
+        }
+        .items p:hover:nth-child(10){
+           border-left: 2px solid white;
+        }
+
+      
+
+        #employees:hover{
+            cursor:pointer;
+            background: rgb(1, 29, 81);
+        }
+        #profile:hover{
+            cursor:pointer;
+            background: rgb(1, 29, 81);
+        }
+        #brands:hover{
+            cursor:pointer;
+            background: rgb(1, 29, 81);
+        }
+        #cat:hover{
+            cursor:pointer;
+            background: rgb(1, 29, 81);
+        }
+        #stores:hover{
+            cursor:pointer;
+            background: rgb(1, 29, 81);
+        }
+        #sales:hover{
+            cursor:pointer;
+            background: rgb(1, 29, 81);
+        }
+        #orders:hover{
+            cursor:pointer;
+            background: rgb(1, 29, 81);
+        }
+        #review:hover{
+            cursor:pointer;
+            background: rgb(1, 29, 81);
+        }
+
+   body{
+    /*background:linear-gradient(green,white);*/
+   }
+
+/*
+        #admin{
+            background-color:rgb(34, 97, 170);
+            position :fixed;
+            top: 0;
+            left: 0;
+            margin-top: 0px;
+            padding-bottom: 20px;
+            padding-right: 1900px;
+            padding-top: 20px;
+            padding-left: 25px;
+            font-size: x-large;
+        }  */
+
+
+
+        /*profile_css*/
+        #deco{
+    font-size: larger;
+    display:flex;
+    justify-content: space-between;
+}
+#fuu{
+    font-size: 100px;
+    border: 2px solid;
+    padding: 10px;
+}
+#x{
+    display:flex;
+}
+#output{
+    position:fixed;
+    left: 100px;
+    border: 1px solid;
+    width:200px;
+    padding: 5px 10px;
+}
+#user{
+    padding: 5px 0px;
+}   
+</style>
